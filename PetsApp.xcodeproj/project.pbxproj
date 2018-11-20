@@ -15,6 +15,14 @@
 		E52D5D4F21A3120B0086EDB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E52D5D4D21A3120B0086EDB2 /* LaunchScreen.storyboard */; };
 		E52D5D5A21A3120B0086EDB2 /* PetsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52D5D5921A3120B0086EDB2 /* PetsAppTests.swift */; };
 		E52D5D6521A3120B0086EDB2 /* PetsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52D5D6421A3120B0086EDB2 /* PetsAppUITests.swift */; };
+		E52D5DE121A351DE0086EDB2 /* Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52D5DCF21A31B270086EDB2 /* Service.framework */; };
+		E52D5DE221A351DE0086EDB2 /* Service.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E52D5DCF21A31B270086EDB2 /* Service.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E52D5DE521A351DE0086EDB2 /* Business.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52D5D9C21A318BE0086EDB2 /* Business.framework */; };
+		E52D5DE621A351DE0086EDB2 /* Business.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E52D5D9C21A318BE0086EDB2 /* Business.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E59C6B7021A49DC70002F891 /* CatViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59C6B6F21A49DC70002F891 /* CatViewProtocol.swift */; };
+		E59C6B7421A49E450002F891 /* CatPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59C6B7321A49E450002F891 /* CatPresenter.swift */; };
+		E59C6B7E21A4B4F50002F891 /* DogPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59C6B7D21A4B4F50002F891 /* DogPresenter.swift */; };
+		E59C6B8021A4B5310002F891 /* DogViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59C6B7F21A4B5310002F891 /* DogViewProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +40,64 @@
 			remoteGlobalIDString = E52D5D3D21A3120A0086EDB2;
 			remoteInfo = PetsApp;
 		};
+		E52D5D9B21A318BE0086EDB2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E52D5D9621A318BD0086EDB2 /* Business.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E52D5D7C21A318BD0086EDB2;
+			remoteInfo = Business;
+		};
+		E52D5D9D21A318BE0086EDB2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E52D5D9621A318BD0086EDB2 /* Business.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E52D5D8521A318BD0086EDB2;
+			remoteInfo = BusinessTests;
+		};
+		E52D5DCE21A31B270086EDB2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E52D5DC921A31B260086EDB2 /* Service.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E52D5DAF21A31B260086EDB2;
+			remoteInfo = Service;
+		};
+		E52D5DD021A31B270086EDB2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E52D5DC921A31B260086EDB2 /* Service.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E52D5DB821A31B260086EDB2;
+			remoteInfo = ServiceTests;
+		};
+		E52D5DE321A351DE0086EDB2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E52D5DC921A31B260086EDB2 /* Service.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E52D5DAE21A31B260086EDB2;
+			remoteInfo = Service;
+		};
+		E52D5DE721A351DE0086EDB2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E52D5D9621A318BD0086EDB2 /* Business.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E52D5D7B21A318BD0086EDB2;
+			remoteInfo = Business;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E52D5DE921A351DE0086EDB2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E52D5DE621A351DE0086EDB2 /* Business.framework in Embed Frameworks */,
+				E52D5DE221A351DE0086EDB2 /* Service.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E52D5D3E21A3120A0086EDB2 /* PetsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +114,12 @@
 		E52D5D6021A3120B0086EDB2 /* PetsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PetsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E52D5D6421A3120B0086EDB2 /* PetsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsAppUITests.swift; sourceTree = "<group>"; };
 		E52D5D6621A3120B0086EDB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E52D5D9621A318BD0086EDB2 /* Business.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Business.xcodeproj; path = Business/Business.xcodeproj; sourceTree = "<group>"; };
+		E52D5DC921A31B260086EDB2 /* Service.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Service.xcodeproj; path = Service/Service.xcodeproj; sourceTree = "<group>"; };
+		E59C6B6F21A49DC70002F891 /* CatViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatViewProtocol.swift; sourceTree = "<group>"; };
+		E59C6B7321A49E450002F891 /* CatPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatPresenter.swift; sourceTree = "<group>"; };
+		E59C6B7D21A4B4F50002F891 /* DogPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogPresenter.swift; sourceTree = "<group>"; };
+		E59C6B7F21A4B5310002F891 /* DogViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogViewProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +127,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E52D5DE521A351DE0086EDB2 /* Business.framework in Frameworks */,
+				E52D5DE121A351DE0086EDB2 /* Service.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +152,8 @@
 		E52D5D3521A3120A0086EDB2 = {
 			isa = PBXGroup;
 			children = (
+				E52D5DC921A31B260086EDB2 /* Service.xcodeproj */,
+				E52D5D9621A318BD0086EDB2 /* Business.xcodeproj */,
 				E52D5D4021A3120A0086EDB2 /* PetsApp */,
 				E52D5D5821A3120B0086EDB2 /* PetsAppTests */,
 				E52D5D6321A3120B0086EDB2 /* PetsAppUITests */,
@@ -106,6 +181,10 @@
 				E52D5D4D21A3120B0086EDB2 /* LaunchScreen.storyboard */,
 				E52D5D5021A3120B0086EDB2 /* Info.plist */,
 				E52D5D4821A3120A0086EDB2 /* PetsApp.xcdatamodeld */,
+				E59C6B6F21A49DC70002F891 /* CatViewProtocol.swift */,
+				E59C6B7321A49E450002F891 /* CatPresenter.swift */,
+				E59C6B7D21A4B4F50002F891 /* DogPresenter.swift */,
+				E59C6B7F21A4B5310002F891 /* DogViewProtocol.swift */,
 			);
 			path = PetsApp;
 			sourceTree = "<group>";
@@ -128,6 +207,24 @@
 			path = PetsAppUITests;
 			sourceTree = "<group>";
 		};
+		E52D5D9721A318BD0086EDB2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E52D5D9C21A318BE0086EDB2 /* Business.framework */,
+				E52D5D9E21A318BE0086EDB2 /* BusinessTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E52D5DCA21A31B260086EDB2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E52D5DCF21A31B270086EDB2 /* Service.framework */,
+				E52D5DD121A31B270086EDB2 /* ServiceTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,10 +235,13 @@
 				E52D5D3A21A3120A0086EDB2 /* Sources */,
 				E52D5D3B21A3120A0086EDB2 /* Frameworks */,
 				E52D5D3C21A3120A0086EDB2 /* Resources */,
+				E52D5DE921A351DE0086EDB2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E52D5DE421A351DE0086EDB2 /* PBXTargetDependency */,
+				E52D5DE821A351DE0086EDB2 /* PBXTargetDependency */,
 			);
 			name = PetsApp;
 			productName = PetsApp;
@@ -218,6 +318,16 @@
 			mainGroup = E52D5D3521A3120A0086EDB2;
 			productRefGroup = E52D5D3F21A3120A0086EDB2 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E52D5D9721A318BD0086EDB2 /* Products */;
+					ProjectRef = E52D5D9621A318BD0086EDB2 /* Business.xcodeproj */;
+				},
+				{
+					ProductGroup = E52D5DCA21A31B260086EDB2 /* Products */;
+					ProjectRef = E52D5DC921A31B260086EDB2 /* Service.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				E52D5D3D21A3120A0086EDB2 /* PetsApp */,
@@ -226,6 +336,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E52D5D9C21A318BE0086EDB2 /* Business.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Business.framework;
+			remoteRef = E52D5D9B21A318BE0086EDB2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E52D5D9E21A318BE0086EDB2 /* BusinessTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = BusinessTests.xctest;
+			remoteRef = E52D5D9D21A318BE0086EDB2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E52D5DCF21A31B270086EDB2 /* Service.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Service.framework;
+			remoteRef = E52D5DCE21A31B270086EDB2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E52D5DD121A31B270086EDB2 /* ServiceTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ServiceTests.xctest;
+			remoteRef = E52D5DD021A31B270086EDB2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E52D5D3C21A3120A0086EDB2 /* Resources */ = {
@@ -260,7 +401,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E52D5D4A21A3120A0086EDB2 /* PetsApp.xcdatamodeld in Sources */,
+				E59C6B8021A4B5310002F891 /* DogViewProtocol.swift in Sources */,
+				E59C6B7021A49DC70002F891 /* CatViewProtocol.swift in Sources */,
 				E52D5D4421A3120A0086EDB2 /* ViewController.swift in Sources */,
+				E59C6B7E21A4B4F50002F891 /* DogPresenter.swift in Sources */,
+				E59C6B7421A49E450002F891 /* CatPresenter.swift in Sources */,
 				E52D5D4221A3120A0086EDB2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +439,16 @@
 			target = E52D5D3D21A3120A0086EDB2 /* PetsApp */;
 			targetProxy = E52D5D6121A3120B0086EDB2 /* PBXContainerItemProxy */;
 		};
+		E52D5DE421A351DE0086EDB2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Service;
+			targetProxy = E52D5DE321A351DE0086EDB2 /* PBXContainerItemProxy */;
+		};
+		E52D5DE821A351DE0086EDB2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Business;
+			targetProxy = E52D5DE721A351DE0086EDB2 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -319,6 +474,7 @@
 		E52D5D6721A3120B0086EDB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -380,6 +536,7 @@
 		E52D5D6821A3120B0086EDB2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -435,6 +592,7 @@
 		E52D5D6A21A3120B0086EDB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 273JX96BA2;
@@ -453,6 +611,7 @@
 		E52D5D6B21A3120B0086EDB2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 273JX96BA2;
