@@ -9,23 +9,7 @@
 import UIKit
 import Business
 
-extension ViewController: CatViewProtocol {
-    
-    func showCats(cats: [CatEntity]) {
-        self.cats = cats
-        //performSegue(withIdentifier: "CatSegue", sender: self)
-        goToCatView()
-    }
-    
-}
-
-extension ViewController: DogViewProtocol {
-    
-    func showDogs(dogs: [DogEntity]) {
-        self.dogs = dogs
-        //performSegue(withIdentifier: "DogSegue", sender: self)
-        goToDogView()
-    }
+extension ViewController: MainViewProtocol {
     
     func showProgressBar() {
         self.indicatorView?.startAnimating()
@@ -71,7 +55,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var petTableView: UITableView?
     @IBOutlet weak var indicatorView: UIActivityIndicatorView?
     
-    var cats: [CatEntity] = []
     var dogs: [DogEntity] = []
     
     var catPresenter = CatPresenter()
@@ -82,29 +65,15 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         catPresenter.catView = self
         dogPresenter.dogView = self
+        catPresenter.navController = self.navigationController
+        dogPresenter.navController = self.navigationController
         
         indicatorView?.style = .gray
         indicatorView?.hidesWhenStopped = true
         indicatorView?.stopAnimating()
         
     }
-    
-    func goToCatView() {
-        let catSb = UIStoryboard.init(name: "CatStoryboard", bundle: nil)
-        let catView = catSb.instantiateViewController(withIdentifier: "CatViewController") as! CatViewController
-        catView.cats = self.cats
-        //present(catView, animated: true, completion: nil)
-        self.navigationController?.pushViewController(catView, animated: true)
-    }
-    
-    func goToDogView() {
-        
-        let dogSb = UIStoryboard.init(name: "DogStoryboard", bundle: nil)
-        let dogView = dogSb.instantiateViewController(withIdentifier: "DogViewController") as! DogViewController
-        dogView.dogs = self.dogs
-        //present(dogView, animated: true, completion: nil)
-        self.navigationController?.pushViewController(dogView, animated: true)
-    }
+
 
 }
 

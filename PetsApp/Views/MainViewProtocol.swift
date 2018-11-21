@@ -1,5 +1,5 @@
 //
-//  DogViewProtocol.swift
+//  CatViewProtocol.swift
 //  PetsApp
 //
 //  Created by Herbert Caller on 20/11/2018.
@@ -9,9 +9,8 @@
 import Foundation
 import Business
 
-protocol DogViewProtocol {
+protocol MainViewProtocol {
     
-    func showDogs(dogs: [DogEntity])
     func showProgressBar()
     func hideProgressBar()
     
