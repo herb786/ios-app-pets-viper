@@ -1,33 +1,32 @@
 //
-//  ApiService.swift
+//  DogService.swift
 //  Service
 //
-//  Created by Herbert Caller on 19/11/2018.
+//  Created by Herbert Caller on 20/11/2018.
 //  Copyright © 2018 hacaller. All rights reserved.
 //
 
-import Business
 import Foundation
+import Business
 
-extension CatService: CatServiceProtocol {
+extension DogService: DogServiceProtocol {
     
-    public func findAllCats() -> [CatEntity] {
-        if cats.isEmpty {
+    public func findAllDogs() -> [DogEntity] {
+        if dogs.isEmpty {
             self.connectToSyncService()
         }
-        return cats
+        return dogs
     }
     
 }
 
-public class CatService: BaseService {
+public class DogService: BaseService {
     
-    var cats: [CatEntity] = []
-    var catServiceDelegate: CatServiceDelegate?
+    var dogs: [DogEntity] = []
     
     override public init() {
         super.init()
-        self.endPoint = "api/cats"
+        self.endPoint = "api/dogs"
     }
     
     override public func dealWithJsonData(data: Data) {
@@ -35,8 +34,8 @@ public class CatService: BaseService {
             let jsonString = try JSONSerialization.jsonObject(with: data, options:
                 JSONSerialization.ReadingOptions.mutableContainers) as? NSArray
             for case let item in jsonString! {
-                if let cat = CatEntity(json: item as! [String : Any]) {
-                    self.cats.append(cat)
+                if let dog = DogEntity(json: item as! [String : Any]) {
+                    self.dogs.append(dog)
                 }
             }
         } catch {}

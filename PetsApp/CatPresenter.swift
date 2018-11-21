@@ -10,10 +10,14 @@ import Foundation
 import Business
 import Service
 
-class CatPresenter {
+struct CatPresenter {
     
     var catView: CatViewProtocol?
-    var catInteractor: CatInteractor()
+    var catInteractor = CatInteractor()
+    
+    init(){
+        catInteractor.catService = CatService.init()
+    }
     
     func loadOnlyCatsWithPhoto() {
         catView?.showProgressBar()
@@ -24,7 +28,7 @@ class CatPresenter {
     
     func loadOnlyFurryCats() {
         catView?.showProgressBar()
-        let cats = catInteractor.getCatListOnlyWithLongFur()()
+        let cats = catInteractor.getCatListOnlyWithLongFur()
         catView?.showCats(cats: cats)
         catView?.hideProgressBar()
     }

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dfu-QD-vfK">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cat View Controller-->
+        <scene sceneID="9X2-64-UFL">
+            <objects>
+                <viewController storyboardIdentifier="CatViewController" id="dfu-QD-vfK" customClass="CatViewController" customModule="PetsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8OG-mE-gFR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qjq-1m-exy">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="CATS" id="QR6-LH-mdo"/>
+                                </items>
+                            </navigationBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Mo8-RO-X0K">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pU4-2F-GeH">
+                                    <size key="itemSize" width="180" height="200"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PetCollectionCell" id="awe-SG-fON">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="dfu-QD-vfK" id="zmt-lC-B08"/>
+                                    <outlet property="delegate" destination="dfu-QD-vfK" id="Tn9-qa-wPh"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MJi-XD-Xiw" firstAttribute="bottom" secondItem="Mo8-RO-X0K" secondAttribute="bottom" id="3zI-xB-4U6"/>
+                            <constraint firstItem="Qjq-1m-exy" firstAttribute="top" secondItem="MJi-XD-Xiw" secondAttribute="top" id="9dQ-8J-13V"/>
+                            <constraint firstItem="Mo8-RO-X0K" firstAttribute="leading" secondItem="MJi-XD-Xiw" secondAttribute="leading" id="Ilf-tV-sFf"/>
+                            <constraint firstItem="Qjq-1m-exy" firstAttribute="leading" secondItem="MJi-XD-Xiw" secondAttribute="leading" id="P9w-2R-w5M"/>
+                            <constraint firstItem="MJi-XD-Xiw" firstAttribute="trailing" secondItem="Mo8-RO-X0K" secondAttribute="trailing" id="QGQ-Yu-h7r"/>
+                            <constraint firstItem="Mo8-RO-X0K" firstAttribute="top" secondItem="Qjq-1m-exy" secondAttribute="bottom" id="cmv-vn-2tX"/>
+                            <constraint firstItem="Qjq-1m-exy" firstAttribute="trailing" secondItem="MJi-XD-Xiw" secondAttribute="trailing" id="sik-EQ-QeM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MJi-XD-Xiw"/>
+                    </view>
+                    <connections>
+                        <outlet property="petCollectionView" destination="Mo8-RO-X0K" id="D6J-is-iL2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BT7-7F-rKn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="53.523238380809602"/>
+        </scene>
+    </scenes>
+</document>

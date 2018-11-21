@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RhF-zx-Cka">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dog View Controller-->
+        <scene sceneID="PHW-6e-Si0">
+            <objects>
+                <viewController storyboardIdentifier="DogViewController" id="RhF-zx-Cka" customClass="DogViewController" customModule="PetsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2NI-Zg-lrO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NFd-sZ-bDJ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="DOGS" id="pjz-RN-Nq1"/>
+                                </items>
+                            </navigationBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pIF-cn-4vO">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UTu-1s-EkZ">
+                                    <size key="itemSize" width="180" height="200"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PetCollectionCell" id="Siz-ni-vBO">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="RhF-zx-Cka" id="Fpc-UH-eDK"/>
+                                    <outlet property="delegate" destination="RhF-zx-Cka" id="Jn5-8m-Pg7"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NFd-sZ-bDJ" firstAttribute="trailing" secondItem="lJb-28-VHW" secondAttribute="trailing" id="1v2-Zv-Vwt"/>
+                            <constraint firstItem="lJb-28-VHW" firstAttribute="trailing" secondItem="pIF-cn-4vO" secondAttribute="trailing" id="74b-no-b1Y"/>
+                            <constraint firstItem="pIF-cn-4vO" firstAttribute="leading" secondItem="lJb-28-VHW" secondAttribute="leading" id="Eeg-5x-Vf5"/>
+                            <constraint firstItem="lJb-28-VHW" firstAttribute="bottom" secondItem="pIF-cn-4vO" secondAttribute="bottom" id="HX8-VI-WpM"/>
+                            <constraint firstItem="NFd-sZ-bDJ" firstAttribute="leading" secondItem="lJb-28-VHW" secondAttribute="leading" id="Mzd-gl-pVB"/>
+                            <constraint firstItem="NFd-sZ-bDJ" firstAttribute="top" secondItem="lJb-28-VHW" secondAttribute="top" id="XSO-QY-sI1"/>
+                            <constraint firstItem="pIF-cn-4vO" firstAttribute="top" secondItem="NFd-sZ-bDJ" secondAttribute="bottom" id="iVx-UA-0S4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lJb-28-VHW"/>
+                    </view>
+                    <connections>
+                        <outlet property="petCollectionView" destination="pIF-cn-4vO" id="BaI-q1-DPA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d6l-Tc-Fyo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37.600000000000001" y="25.637181409295355"/>
+        </scene>
+    </scenes>
+</document>

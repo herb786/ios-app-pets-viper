@@ -27,8 +27,8 @@ public extension DogEntity {
 }
 
 public struct DogEntity {
-    let id: Int?
-    let breed: String?
-    let origin: String?
-    let pictures: [String]?
+    public let id: Int?
+    public let breed: String?
+    public let origin: String?
+    public let pictures: [String]?
 }

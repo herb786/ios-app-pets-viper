@@ -23,6 +23,12 @@
 		E59C6B7421A49E450002F891 /* CatPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59C6B7321A49E450002F891 /* CatPresenter.swift */; };
 		E59C6B7E21A4B4F50002F891 /* DogPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59C6B7D21A4B4F50002F891 /* DogPresenter.swift */; };
 		E59C6B8021A4B5310002F891 /* DogViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59C6B7F21A4B5310002F891 /* DogViewProtocol.swift */; };
+		E59C6B8221A5B6840002F891 /* DogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59C6B8121A5B6840002F891 /* DogViewController.swift */; };
+		E59C6B8421A5B6940002F891 /* CatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59C6B8321A5B6940002F891 /* CatViewController.swift */; };
+		E59C6B8B21A5BCB50002F891 /* DogStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E59C6B8A21A5BCB50002F891 /* DogStoryboard.storyboard */; };
+		E59C6B8D21A5BFB90002F891 /* CatStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E59C6B8C21A5BFB90002F891 /* CatStoryboard.storyboard */; };
+		E59C6B9321A5CF270002F891 /* PetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59C6B9221A5CF270002F891 /* PetCollectionViewCell.swift */; };
+		E59C6B9521A5D0D00002F891 /* PetCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E59C6B9421A5D0D00002F891 /* PetCollectionCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +126,12 @@
 		E59C6B7321A49E450002F891 /* CatPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatPresenter.swift; sourceTree = "<group>"; };
 		E59C6B7D21A4B4F50002F891 /* DogPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogPresenter.swift; sourceTree = "<group>"; };
 		E59C6B7F21A4B5310002F891 /* DogViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogViewProtocol.swift; sourceTree = "<group>"; };
+		E59C6B8121A5B6840002F891 /* DogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogViewController.swift; sourceTree = "<group>"; };
+		E59C6B8321A5B6940002F891 /* CatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatViewController.swift; sourceTree = "<group>"; };
+		E59C6B8A21A5BCB50002F891 /* DogStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DogStoryboard.storyboard; sourceTree = "<group>"; };
+		E59C6B8C21A5BFB90002F891 /* CatStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CatStoryboard.storyboard; sourceTree = "<group>"; };
+		E59C6B9221A5CF270002F891 /* PetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetCollectionViewCell.swift; sourceTree = "<group>"; };
+		E59C6B9421A5D0D00002F891 /* PetCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PetCollectionCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +186,7 @@
 		E52D5D4021A3120A0086EDB2 /* PetsApp */ = {
 			isa = PBXGroup;
 			children = (
+				E59C6B8A21A5BCB50002F891 /* DogStoryboard.storyboard */,
 				E52D5D4121A3120A0086EDB2 /* AppDelegate.swift */,
 				E52D5D4321A3120A0086EDB2 /* ViewController.swift */,
 				E52D5D4521A3120A0086EDB2 /* Main.storyboard */,
@@ -185,6 +198,11 @@
 				E59C6B7321A49E450002F891 /* CatPresenter.swift */,
 				E59C6B7D21A4B4F50002F891 /* DogPresenter.swift */,
 				E59C6B7F21A4B5310002F891 /* DogViewProtocol.swift */,
+				E59C6B8121A5B6840002F891 /* DogViewController.swift */,
+				E59C6B8321A5B6940002F891 /* CatViewController.swift */,
+				E59C6B8C21A5BFB90002F891 /* CatStoryboard.storyboard */,
+				E59C6B9221A5CF270002F891 /* PetCollectionViewCell.swift */,
+				E59C6B9421A5D0D00002F891 /* PetCollectionCell.xib */,
 			);
 			path = PetsApp;
 			sourceTree = "<group>";
@@ -373,7 +391,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E59C6B8D21A5BFB90002F891 /* CatStoryboard.storyboard in Resources */,
 				E52D5D4F21A3120B0086EDB2 /* LaunchScreen.storyboard in Resources */,
+				E59C6B8B21A5BCB50002F891 /* DogStoryboard.storyboard in Resources */,
+				E59C6B9521A5D0D00002F891 /* PetCollectionCell.xib in Resources */,
 				E52D5D4C21A3120B0086EDB2 /* Assets.xcassets in Resources */,
 				E52D5D4721A3120A0086EDB2 /* Main.storyboard in Resources */,
 			);
@@ -402,8 +423,11 @@
 			files = (
 				E52D5D4A21A3120A0086EDB2 /* PetsApp.xcdatamodeld in Sources */,
 				E59C6B8021A4B5310002F891 /* DogViewProtocol.swift in Sources */,
+				E59C6B8421A5B6940002F891 /* CatViewController.swift in Sources */,
 				E59C6B7021A49DC70002F891 /* CatViewProtocol.swift in Sources */,
+				E59C6B8221A5B6840002F891 /* DogViewController.swift in Sources */,
 				E52D5D4421A3120A0086EDB2 /* ViewController.swift in Sources */,
+				E59C6B9321A5CF270002F891 /* PetCollectionViewCell.swift in Sources */,
 				E59C6B7E21A4B4F50002F891 /* DogPresenter.swift in Sources */,
 				E59C6B7421A49E450002F891 /* CatPresenter.swift in Sources */,
 				E52D5D4221A3120A0086EDB2 /* AppDelegate.swift in Sources */,

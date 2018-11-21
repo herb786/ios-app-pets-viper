@@ -35,12 +35,12 @@ public extension CatEntity {
 }
 
 public struct CatEntity {
-    let id: Int?
-    let breed: String?
-    let country: String?
-    let origin: String?
-    let bodyType: String?
-    let coat: String?
-    let pattern: String?
-    let photo: String?
+    public let id: Int?
+    public let breed: String?
+    public let country: String?
+    public let origin: String?
+    public let bodyType: String?
+    public let coat: String?
+    public let pattern: String?
+    public let photo: String?
 }

@@ -10,7 +10,7 @@ import Foundation
 
 public class CatInteractor: CatCaseProtocol {
     
-    var catService: CatServiceProtocol? = nil
+    public var catService: CatServiceProtocol? = nil
     
     public init() {
         

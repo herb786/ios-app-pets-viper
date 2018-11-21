@@ -11,7 +11,7 @@ import Foundation
 
 public class DogInteractor: DogCaseProtocol {
     
-    let dogService: DogServiceProtocol? = nil
+    public var dogService: DogServiceProtocol? = nil
     
     public init() {
         
